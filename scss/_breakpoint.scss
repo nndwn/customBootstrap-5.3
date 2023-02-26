@@ -1,18 +1,20 @@
-@use "component" as *;
+@use "custom" as *;
 
 
 @media (min-width: 576px) {  }
 
 
-@include media-breakpoint-up(md){
-    .fill-md-dark {
+@include media-breakpoint-up(lg){
+    .fill-lg-dark {
         fill: var(--dark);
     }
-    .fill-md-yellow{
+    .fill-lg-yellow{
         fill: var(--yellow);
     }
-    .opacity-md-0 {
-        opacity: 0;
+    .dropmenu {
+        &::after {
+            border-top: 3px solid var(--dark);
+        }
     }
 }
 

@@ -1,0 +1,61 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "variables";
+
+//@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/containers";
+@import "utilities";
+
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+
+//color and fill
+.fill-white {
+    fill: var(--white);
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+//background-color
+.bg-dark {
+    background-color: var(--dark);
+}
+.bg-white{
+    background-color: var(--white);
+}
+.bg-yellow {
+    background-color: var(--yellow);
+}
+.bg-red {
+    background-color: var(--red);
+}
+
+
+//font-family
+.font-custom{
+    font-family: var(--font-custom);
+}
+.font-sans-serif {
+    font-family: var(--font-sans-serif);
+}
+.font-serif {
+    font-family: var(--font-serif);
+}
+
+.outline-none{
+    outline: none;
+}
+//flex
+.flex-basis-0{
+    flex-basis: 0;
+}
+
+.list-style-none {
+    list-style: none;
+}
+
+// padding
+//@mixin rulesize ()
+

@@ -1,3 +1,4 @@
+$enable-container-classes:    true !default;
 $enable-important-utilities:  false !default;
 $enable-rfs:                  true !default;
 
@@ -7,11 +8,12 @@ $spacers: (
   1: $spacer * .25,
   2: $spacer * .5,
   3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 2,
-  6: $spacer * 2.25,
-  7: $spacer * 2.5,
-  8: $spacer * 3,
+  4: $spacer * 1.25,
+  5: $spacer * 1.5,
+  6: $spacer * 2,
+  7: $spacer * 2.25,
+  8: $spacer * 2.5,
+  9: $spacer * 3,
 ) !default;
 
 $grid-breakpoints: (
@@ -36,3 +38,37 @@ $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           1.5rem !default;
+$grid-row-columns:            6 !default;
+
+// Container padding
+
+$container-padding-x: $grid-gutter-width !default;
+
+$variable-prefix:             bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
+$prefix:                      $variable-prefix !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+) !default;
+
+$zindex-levels: (
+  n1: -1,
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3,
+  1000: 1000
+) !default;
+
+$position-values: (
+  0: 0,
+  50: 50%,
+  100: 100%
+) !default;

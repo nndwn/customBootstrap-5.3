@@ -33,7 +33,7 @@ $utilities: map-merge(
     "padding-end": (
       responsive: true,
       property: padding-right,
-      class: pe,
+      class: pr,
       values: $spacers
     ),
     "padding-bottom": (
@@ -45,7 +45,7 @@ $utilities: map-merge(
     "padding-start": (
       responsive: true,
       property: padding-left,
-      class: ps,
+      class: pl,
       values: $spacers
     ),
     "opacity": (
@@ -66,6 +66,7 @@ $utilities: map-merge(
       values: inline inline-block block grid table table-row table-cell flex inline-flex none
     ),
     "position": (
+      responsive: true,
       property: position,
       values: static relative absolute fixed sticky
     ),
@@ -277,7 +278,7 @@ $utilities: map-merge(
     ),
     "text-transform": (
       property: text-transform,
-      class: text,
+      class: '',
       values: lowercase uppercase capitalize
     ),
     "white-space": (
@@ -293,6 +294,35 @@ $utilities: map-merge(
       class: text,
       values: (break: break-word),
       rtl: false
+    ),
+    "color": (
+      responsive: true,
+      property: color,
+      values: (
+        dark: var(--dark),
+        white: var(--white)
+        ),
+    ),
+    "z-index": (
+      property: z-index,
+      class: z,
+      values: $zindex-levels,
+    ),
+    "top": (
+      property: top,
+      values: $position-values
+    ),
+    "bottom": (
+      property: bottom,
+      values: $position-values
+    ),
+    "start": (
+      property: left,
+      values: $position-values
+    ),
+    "end": (
+      property: right,
+      values: $position-values
     ),
   ),
   $utilities
