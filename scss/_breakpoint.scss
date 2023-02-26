@@ -1,0 +1,23 @@
+@use "component" as *;
+
+
+@media (min-width: 576px) {  }
+
+
+@include media-breakpoint-up(md){
+    .fill-md-dark {
+        fill: var(--dark);
+    }
+    .fill-md-yellow{
+        fill: var(--yellow);
+    }
+    .opacity-md-0 {
+        opacity: 0;
+    }
+}
+
+@media (min-width: 992px) {  }
+
+@media (min-width: 1200px) {  }
+
+@media (min-width: 1400px) {  }

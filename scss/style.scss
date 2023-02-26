@@ -1,0 +1,13 @@
+@use "reset";
+@use "font";
+@use "root";
+@use "breakpoint";
+
+
+body {
+    color: var(--dark);
+}
+.container {
+    width: 100%;
+    padding: 0 2rem;
+}
