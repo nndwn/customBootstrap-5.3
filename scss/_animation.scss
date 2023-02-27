@@ -1,0 +1,144 @@
+@keyframes startHeader {
+    0% {
+      transform: translateY(-105%);
+    }
+    82% {
+      transform: translateY(-105%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+@keyframes startBox {
+    0% {
+      opacity: 1;
+      transform: scaleX(0);
+      transform-origin: left center;
+    }
+    7% {
+      transform-origin: left center;
+    }
+    8% {
+      transform: scaleX(1);
+      transform-origin: right center;
+    }
+    9% {
+      transform: scaleX(1);
+    }
+    13% {
+      transform: scaleX(1);
+    }
+    25% {
+      transform: scaleX(1);
+    }
+    30% {
+      opacity: 1;
+    }
+    35% {
+      opacity: 0;
+    }
+    40% {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(0);
+      transform-origin: right center;
+      opacity: 0;
+    }
+  }
+
+
+@keyframes startTxt {
+    0% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    }
+    39% {
+      opacity: 0;
+    }
+    to {
+      content: "";
+      opacity: 0;
+    }
+  }
+
+  @keyframes startTxtArea {
+    0% {
+      opacity: 0;
+    }
+    93% {
+      opacity: 0;
+    }
+    95% {
+      opacity: 1;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes startMv {
+    0% {
+      width: 0;
+      height: 160px;
+      opacity: 0;
+    }
+    65% {
+      min-width: 720px;
+      width: 720px;
+      height: 160px;
+      opacity: 0;
+    }
+    66% {
+      opacity: 1;
+    }
+    72% {
+      width: 720px;
+      height: 160px;
+    }
+    to {
+      min-width: 720px;
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+
+  @keyframes startMvImg {
+    0% {
+      top: calc(-50vh + 160px);
+    }
+    72% {
+      top: calc(-50vh + 160px);
+    }
+    to {
+      top: 0;
+    }
+  }
+  @keyframes fade {
+    0% {
+      opacity: 0;
+      transform: scale(1.5);
+      z-index: 2;
+    }
+    15% {
+      opacity: 1;
+      z-index: 2;
+    }
+    49% {
+      opacity: 1;
+      z-index: 2;
+    }
+    50% {
+      z-index: 1;
+    }
+    85% {
+      opacity: 0;
+    }
+    to {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }

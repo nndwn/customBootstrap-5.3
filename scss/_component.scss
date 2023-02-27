@@ -1,3 +1,5 @@
+@use 'animation';
+
 nav a.active {
     position: relative;
     &::before {
@@ -42,3 +44,69 @@ nav a.active {
     }
 
 }
+
+.mvTxt {
+    position: absolute;
+    z-index: 10;
+    bottom: 78px;
+    left: 17px;
+    opacity: 1;
+    transition: all .2s;
+    h2 {
+        font-size: 50px;
+    }
+    h3 {
+        font-size: 14px;
+        font-weight: 400;
+        text-indent: 2px;
+    }
+    h2, h3 {
+        color: white;
+        text-align: left;
+    }
+}
+
+.mvList{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    transition: all .3s;
+    li {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        animation: fade 10s linear infinite;
+        opacity: 0;
+    }
+    li:last-child .mvImg img {
+        -o-object-position: -90px 30px!important;
+        object-position: -90px 30px!important;
+    }
+    .mvImg {
+        min-height: 500px;
+        transition: all .3s;
+
+    }
+    .mvImg::before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.2);
+        transform: translateY(-50%);
+        top: 50%;
+        transition: all .3s;
+        z-index: 10;
+    }
+
+
+}
+
+
+
+

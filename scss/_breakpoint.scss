@@ -16,7 +16,91 @@
             border-top: 3px solid var(--dark);
         }
     }
+    .nav {
+        //position: fixed;
+        //width: 100%;
+        //height: 75px;
+        opacity: .95;
+        //background: #fff;
+        box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
+        animation: startHeader 2.5s;
+    }
+    %mvarea {
+        text-align: right;
+        position: absolute;
+        left: calc(50% - 360px);
+        top: calc(50% - 80px);
+        opacity: 0;
+        width: 720px;
+        height: 160px;
+    }
+    #mvArea{
+        position: relative;
+        //width: 100vw;
+        height: 100vh;
+        min-width: 1200px;
+        &::before{
+            @extend %mvarea;
+            content: '';
+            display: inline-block;
+            background: #07b53b;
+            z-index: 100;
+            animation: startBox 5s;
+            transform: unset;
+            transition: none;
+        }
+        &::after{
+            @extend %mvarea;
+            content: "Life on LINE";
+            color: #fff;
+            font-size: 48px;
+            font-family: anton,sans-serif;
+            font-weight: 700;
+            padding: 30px 30px 0 0;
+            line-height: 3.333;
+            box-sizing: border-box;
+            z-index: 101;
+            animation: startTxt 5s;
+        }
+        .mvTxt {
+            bottom: calc(50% - 250px);
+            left: 142px;
+            color: white;
+            animation: startTxtArea 2.1s;
+            h2 {
+                font-size: 140px;
+                white-space: nowrap;
+            }
+            h3 {
+                font-size: 40px;
+                text-indent: 8px;
+                margin-bottom: 20px;
+            }
+        }
+        .mvList {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            min-width: 1200px;
+            animation: startMv 2.1s;
+            animation-timing-function: ease-in-out;
+            transition: all .3s;
+            li {
+                height: 100vh;
+                top: 0;
+            }
+            
+     
+            .mvImg {
+                min-height: 100vh;
+                animation: startMvImg 2.1s;
+                animation-timing-function: ease-in-out;
+            }
+        }
+        
+    }
 }
+
 
 @media (min-width: 992px) {  }
 
