@@ -39,35 +39,20 @@ nav a.active {
     li {
         margin: .5rem 0;
     }
-    a {
-        text-decoration: none;
-    }
 
 }
-
+#mvArea {
+    max-width: 100vw;
+    height: 500px;
+    margin-bottom: 2rem;
+}
 .mvTxt {
-    position: absolute;
     z-index: 10;
-    bottom: 78px;
-    left: 17px;
-    opacity: 1;
     transition: all .2s;
-    h2 {
-        font-size: 50px;
-    }
-    h3 {
-        font-size: 14px;
-        font-weight: 400;
-        text-indent: 2px;
-    }
-    h2, h3 {
-        color: white;
-        text-align: left;
-    }
 }
 
 .mvList{
-    position: relative;
+    //position: relative;
     width: 100%;
     height: 500px;
     transform: translate(-50%, -50%);
@@ -76,11 +61,7 @@ nav a.active {
     overflow: hidden;
     transition: all .3s;
     li {
-        position: absolute;
-        top: 0;
-        width: 100%;
         animation: fade 10s linear infinite;
-        opacity: 0;
     }
     li:last-child .mvImg img {
         -o-object-position: -90px 30px!important;

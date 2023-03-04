@@ -7,8 +7,8 @@
   "scripts": {
     "build": "npm run css",
     "css-lint": "stylelint assets/css/",
-    "css-prefix": "postcss --replace css/style.css --use autoprefixer --map",
-    "css-purge": "purgecss --keyframes --css css/style.css --content sample/dailyhopeless/index.html --output css/",
+    "css-prefix": "postcss --replace style.css --use autoprefixer --map",
+    "css-purge": "purgecss --keyframes --css style.css --content sample/dailyhopeless/index.html --output css/",
     "css": "npm-run-all css-prefix",
     "server": "live-server --port=3000",
     "start": "npm-run-all --parallel watch server",

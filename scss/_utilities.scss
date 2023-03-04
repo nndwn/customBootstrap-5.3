@@ -71,6 +71,7 @@ $utilities: map-merge(
       values: static relative absolute fixed sticky
     ),
     "viewport-height": (
+      responsive: true,
       property: height,
       class: vh,
       values: (100: 100vh)
@@ -230,6 +231,7 @@ $utilities: map-merge(
       values: $spacers
     ),
     "font-size": (
+      responsive: true,
       rfs: true,
       property: font-size,
       class: fs,
@@ -298,6 +300,16 @@ $utilities: map-merge(
     "color": (
       responsive: true,
       property: color,
+      values: (
+        dark: var(--dark),
+        white: var(--white),
+        yellow: var(--yellow)
+        ),
+    ),
+    "background": (
+      responsive: true,
+      property: background,
+      class: bg, 
       values: (
         dark: var(--dark),
         white: var(--white)

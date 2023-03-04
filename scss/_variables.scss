@@ -1,6 +1,8 @@
 $enable-container-classes:    true !default;
 $enable-important-utilities:  false !default;
 $enable-rfs:                  true !default;
+$enable-grid-classes:         true !default;
+
 
 $spacer: 1rem !default;
 $spacers: (
@@ -72,3 +74,5 @@ $position-values: (
   50: 50%,
   100: 100%
 ) !default;
+
+$gutters: $spacers !default;
