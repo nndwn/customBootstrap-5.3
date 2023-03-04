@@ -3,30 +3,24 @@
   "version": "1.0.0",
   "private": true,
   "description": "",
-  "main": "index.html",
   "scripts": {
-    "build": "npm run css",
-    "css-lint": "stylelint assets/css/",
-    "css-prefix": "postcss --replace style.css --use autoprefixer --map",
-    "css-purge": "purgecss --keyframes --css style.css --content sample/dailyhopeless/index.html --output css/",
-    "css": "npm-run-all css-prefix",
+    "build": "npm run css ",
+    "css-purge": "purgecss --keyframes --css sample/dailyhopeless/css/style.css --content sample/dailyhopeless/index.html --output sample/dailyhopeless/css/purge/",
     "server": "live-server --port=3000",
     "start": "npm-run-all --parallel watch server",
-    "watch": "nodemon -e html,css -x \"npm run css\"",
-    "test": "npm run css-lint && npm run css"
+    "css": "npm-run-all css-purge",
+    "watch": "nodemon --watch sample -e js,html,css \"npm run watch\""
   },
   "keywords": [],
   "author": "nndwn",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^10.4.13",
     "live-server": "^1.1.0",
     "nodemon": "^2.0.20",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
-    "purgecss": "^5.0.0",
-    "stylelint": "^15.2.0"
+    "purgecss": "^5.0.0"
   },
   "dependencies": {
     "bootstrap": "^5.2.3",

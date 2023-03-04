@@ -26,7 +26,11 @@ nav a.active {
     }
 }
 
+.lang-menu.show{
+    display: block;
+}
 .lang-menu {
+    display: none;
     position: absolute;
     right: 0;
     list-style: none;
@@ -41,19 +45,33 @@ nav a.active {
     }
 
 }
+%resize{
+    height: 120px;
+}
 #mvArea {
     max-width: 100vw;
     height: 500px;
     margin-bottom: 2rem;
+    &.resize {
+        .mvTxt {
+            opacity: 0
+        }
+        .mvList {
+            @extend %resize;
+        }
+    }
+    &.resize::before{
+        @extend %resize;
+    }
 }
 .mvTxt {
     z-index: 10;
     transition: all .2s;
 }
 
+
 .mvList{
     //position: relative;
-    width: 100%;
     height: 500px;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -62,10 +80,10 @@ nav a.active {
     transition: all .3s;
     li {
         animation: fade 10s linear infinite;
-    }
-    li:last-child .mvImg img {
-        -o-object-position: -90px 30px!important;
-        object-position: -90px 30px!important;
+        @at-root &:last-child .mvImg img {
+            -o-object-position: -90px 30px!important;
+            object-position: -90px 30px!important;
+        }
     }
     .mvImg {
         min-height: 500px;
@@ -78,7 +96,7 @@ nav a.active {
         display: inline-block;
         width: 100%;
         height: 100%;
-        background: rgba(0,0,0,.2);
+        background: rgba(0,0,0,.5);
         transform: translateY(-50%);
         top: 50%;
         transition: all .3s;
@@ -87,6 +105,23 @@ nav a.active {
 
 
 }
+
+#mainTitleArea{
+    top: 15rem;
+    h3 {
+        font-size: 36px;
+    }
+}
+
+#mvArea.resize+#mainTitleArea {
+    opacity: 1;
+    transition-delay: .1s;
+    z-index: 10;
+}
+#mvArea.resize+#mainTitleArea h3 {
+    opacity: 1;
+}
+
 
 
 
