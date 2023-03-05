@@ -44,9 +44,6 @@ a {
 nav h1, nav h2, nav h3, nav h4, nav h5, nav h6 {
   display: inline;
 }
-nav a {
-  text-decoration: none;
-}
 nav ul {
   list-style: none;
 }
@@ -55,6 +52,7 @@ nav ul {
   --white: rgb(255, 255, 255);
   --dark: rgb(19, 19, 19);
   --grey: rgba(19, 19, 19, 80%);
+  --grey-20: rgba(19, 19, 19, 20%);
   --yellow: rgb(255, 212, 0);
   --red: rgb(255, 0, 50);
   --blue:rgb(255, 0, 50);
@@ -356,6 +354,68 @@ nav a.active::before {
 
 #mvArea.resize + #mainTitleArea h3 {
   opacity: 1;
+}
+
+#gnbArea {
+  position: sticky;
+  position: -webkit-sticky;
+  overflow: auto;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  overflow-x: hidden;
+  z-index: 11;
+}
+#gnbArea .gnb {
+  white-space: nowrap;
+}
+#gnbArea .gnb .gnbItem {
+  opacity: 0.5;
+}
+#gnbArea .gnb .gnbItem.current {
+  opacity: 1;
+}
+
+.truncate {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  display: -webkit-inline-box;
+}
+
+.imagecontent {
+  height: 25rem;
+}
+.imagecontent img {
+  border-radius: 5px;
+  background-color: var(--dark);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+.imagecontent .text {
+  z-index: 10;
+  bottom: 10px;
+  right: 15px;
+  opacity: 0.5;
+}
+
+.button {
+  border-radius: 5px;
+}
+.button svg {
+  margin-left: 1rem;
+}
+
+.icon-left, .icon-right {
+  z-index: 10;
+}
+
+.icon-left {
+  top: 0;
+  right: 0;
+}
+
+.icon-right {
+  top: 0;
+  left: 0;
 }
 
 .container,
@@ -2608,23 +2668,23 @@ nav a.active::before {
 }
 
 .fs-5 {
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: 1.5rem;
 }
 
 .fs-6 {
-  font-size: calc(1.325rem + 0.9vw);
+  font-size: 2rem;
 }
 
 .fs-7 {
-  font-size: calc(1.35rem + 1.2vw);
+  font-size: 2.25rem;
 }
 
 .fs-8 {
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: 2.5rem;
 }
 
 .fs-9 {
-  font-size: calc(1.425rem + 2.1vw);
+  font-size: 3rem;
 }
 
 .font-style-italic {
@@ -2742,12 +2802,24 @@ nav a.active::before {
   color: var(--grey);
 }
 
+.color-grey-20 {
+  color: var(--grey-20);
+}
+
 .bg-dark {
   background: var(--dark);
 }
 
 .bg-white {
   background: var(--white);
+}
+
+.bg-grey {
+  background: var(--grey);
+}
+
+.bg-grey-20 {
+  background: var(--grey-20);
 }
 
 .z-n1 {
@@ -3586,19 +3658,19 @@ nav a.active::before {
     font-size: 1.25rem;
   }
   .fs-xs-5 {
-    font-size: calc(1.275rem + 0.3vw);
+    font-size: 1.5rem;
   }
   .fs-xs-6 {
-    font-size: calc(1.325rem + 0.9vw);
+    font-size: 2rem;
   }
   .fs-xs-7 {
-    font-size: calc(1.35rem + 1.2vw);
+    font-size: 2.25rem;
   }
   .fs-xs-8 {
-    font-size: calc(1.375rem + 1.5vw);
+    font-size: 2.5rem;
   }
   .fs-xs-9 {
-    font-size: calc(1.425rem + 2.1vw);
+    font-size: 3rem;
   }
   .text-xs-start {
     text-align: left;
@@ -3621,11 +3693,20 @@ nav a.active::before {
   .color-xs-grey {
     color: var(--grey);
   }
+  .color-xs-grey-20 {
+    color: var(--grey-20);
+  }
   .bg-xs-dark {
     background: var(--dark);
   }
   .bg-xs-white {
     background: var(--white);
+  }
+  .bg-xs-grey {
+    background: var(--grey);
+  }
+  .bg-xs-grey-20 {
+    background: var(--grey-20);
   }
 }
 @media (min-width: 576px) {
@@ -4392,19 +4473,19 @@ nav a.active::before {
     font-size: 1.25rem;
   }
   .fs-sm-5 {
-    font-size: calc(1.275rem + 0.3vw);
+    font-size: 1.5rem;
   }
   .fs-sm-6 {
-    font-size: calc(1.325rem + 0.9vw);
+    font-size: 2rem;
   }
   .fs-sm-7 {
-    font-size: calc(1.35rem + 1.2vw);
+    font-size: 2.25rem;
   }
   .fs-sm-8 {
-    font-size: calc(1.375rem + 1.5vw);
+    font-size: 2.5rem;
   }
   .fs-sm-9 {
-    font-size: calc(1.425rem + 2.1vw);
+    font-size: 3rem;
   }
   .text-sm-start {
     text-align: left;
@@ -4427,11 +4508,20 @@ nav a.active::before {
   .color-sm-grey {
     color: var(--grey);
   }
+  .color-sm-grey-20 {
+    color: var(--grey-20);
+  }
   .bg-sm-dark {
     background: var(--dark);
   }
   .bg-sm-white {
     background: var(--white);
+  }
+  .bg-sm-grey {
+    background: var(--grey);
+  }
+  .bg-sm-grey-20 {
+    background: var(--grey-20);
   }
 }
 @media (min-width: 768px) {
@@ -5198,19 +5288,19 @@ nav a.active::before {
     font-size: 1.25rem;
   }
   .fs-md-5 {
-    font-size: calc(1.275rem + 0.3vw);
+    font-size: 1.5rem;
   }
   .fs-md-6 {
-    font-size: calc(1.325rem + 0.9vw);
+    font-size: 2rem;
   }
   .fs-md-7 {
-    font-size: calc(1.35rem + 1.2vw);
+    font-size: 2.25rem;
   }
   .fs-md-8 {
-    font-size: calc(1.375rem + 1.5vw);
+    font-size: 2.5rem;
   }
   .fs-md-9 {
-    font-size: calc(1.425rem + 2.1vw);
+    font-size: 3rem;
   }
   .text-md-start {
     text-align: left;
@@ -5233,11 +5323,20 @@ nav a.active::before {
   .color-md-grey {
     color: var(--grey);
   }
+  .color-md-grey-20 {
+    color: var(--grey-20);
+  }
   .bg-md-dark {
     background: var(--dark);
   }
   .bg-md-white {
     background: var(--white);
+  }
+  .bg-md-grey {
+    background: var(--grey);
+  }
+  .bg-md-grey-20 {
+    background: var(--grey-20);
   }
 }
 @media (min-width: 992px) {
@@ -6004,19 +6103,19 @@ nav a.active::before {
     font-size: 1.25rem;
   }
   .fs-lg-5 {
-    font-size: calc(1.275rem + 0.3vw);
+    font-size: 1.5rem;
   }
   .fs-lg-6 {
-    font-size: calc(1.325rem + 0.9vw);
+    font-size: 2rem;
   }
   .fs-lg-7 {
-    font-size: calc(1.35rem + 1.2vw);
+    font-size: 2.25rem;
   }
   .fs-lg-8 {
-    font-size: calc(1.375rem + 1.5vw);
+    font-size: 2.5rem;
   }
   .fs-lg-9 {
-    font-size: calc(1.425rem + 2.1vw);
+    font-size: 3rem;
   }
   .text-lg-start {
     text-align: left;
@@ -6039,11 +6138,20 @@ nav a.active::before {
   .color-lg-grey {
     color: var(--grey);
   }
+  .color-lg-grey-20 {
+    color: var(--grey-20);
+  }
   .bg-lg-dark {
     background: var(--dark);
   }
   .bg-lg-white {
     background: var(--white);
+  }
+  .bg-lg-grey {
+    background: var(--grey);
+  }
+  .bg-lg-grey-20 {
+    background: var(--grey-20);
   }
 }
 @media (min-width: 1200px) {
@@ -6810,19 +6918,19 @@ nav a.active::before {
     font-size: 1.25rem;
   }
   .fs-xl-5 {
-    font-size: calc(1.275rem + 0.3vw);
+    font-size: 1.5rem;
   }
   .fs-xl-6 {
-    font-size: calc(1.325rem + 0.9vw);
+    font-size: 2rem;
   }
   .fs-xl-7 {
-    font-size: calc(1.35rem + 1.2vw);
+    font-size: 2.25rem;
   }
   .fs-xl-8 {
-    font-size: calc(1.375rem + 1.5vw);
+    font-size: 2.5rem;
   }
   .fs-xl-9 {
-    font-size: calc(1.425rem + 2.1vw);
+    font-size: 3rem;
   }
   .text-xl-start {
     text-align: left;
@@ -6845,88 +6953,20 @@ nav a.active::before {
   .color-xl-grey {
     color: var(--grey);
   }
+  .color-xl-grey-20 {
+    color: var(--grey-20);
+  }
   .bg-xl-dark {
     background: var(--dark);
   }
   .bg-xl-white {
     background: var(--white);
   }
-}
-@media (min-width: 1200px) {
-  .fs-5 {
-    font-size: 1.5rem;
+  .bg-xl-grey {
+    background: var(--grey);
   }
-  .fs-6 {
-    font-size: 2rem;
-  }
-  .fs-7 {
-    font-size: 2.25rem;
-  }
-  .fs-8 {
-    font-size: 2.5rem;
-  }
-  .fs-9 {
-    font-size: 3rem;
-  }
-  .fs-xs-5 {
-    font-size: 1.5rem;
-  }
-  .fs-xs-6 {
-    font-size: 2rem;
-  }
-  .fs-xs-7 {
-    font-size: 2.25rem;
-  }
-  .fs-xs-8 {
-    font-size: 2.5rem;
-  }
-  .fs-xs-9 {
-    font-size: 3rem;
-  }
-  .fs-sm-5 {
-    font-size: 1.5rem;
-  }
-  .fs-sm-6 {
-    font-size: 2rem;
-  }
-  .fs-sm-7 {
-    font-size: 2.25rem;
-  }
-  .fs-sm-8 {
-    font-size: 2.5rem;
-  }
-  .fs-sm-9 {
-    font-size: 3rem;
-  }
-  .fs-md-5 {
-    font-size: 1.5rem;
-  }
-  .fs-md-6 {
-    font-size: 2rem;
-  }
-  .fs-md-7 {
-    font-size: 2.25rem;
-  }
-  .fs-md-8 {
-    font-size: 2.5rem;
-  }
-  .fs-md-9 {
-    font-size: 3rem;
-  }
-  .fs-lg-5 {
-    font-size: 1.5rem;
-  }
-  .fs-lg-6 {
-    font-size: 2rem;
-  }
-  .fs-lg-7 {
-    font-size: 2.25rem;
-  }
-  .fs-lg-8 {
-    font-size: 2.5rem;
-  }
-  .fs-lg-9 {
-    font-size: 3rem;
+  .bg-xl-grey-20 {
+    background: var(--grey-20);
   }
 }
 @media print {
@@ -7002,6 +7042,9 @@ nav a.active::before {
 }
 
 @media (min-width: 992px) {
+  #mainTitleArea, #mvArea .mvList, #mvArea, main {
+    min-width: 1200px;
+  }
   .fill-lg-dark {
     fill: var(--dark);
   }
@@ -7025,7 +7068,6 @@ nav a.active::before {
     height: 160px;
   }
   #mvArea {
-    min-width: 1200px;
     height: 100vh;
   }
   #mvArea::before {
@@ -7061,7 +7103,6 @@ nav a.active::before {
   }
   #mvArea .mvList {
     height: 100vh;
-    min-width: 1200px;
     animation: startMv 2.1s;
     animation-timing-function: ease-in-out;
     transition: all 0.3s;
@@ -7076,7 +7117,6 @@ nav a.active::before {
     animation-timing-function: ease-in-out;
   }
   #mainTitleArea {
-    min-width: 1200px;
     top: calc(50vh + 16rem);
     transition: all 0.2s;
     transition-delay: 0s;
@@ -7087,6 +7127,24 @@ nav a.active::before {
   }
   #mainTitleArea p {
     white-space: pre-wrap;
+  }
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .icon-left, .icon-right {
+    border-radius: 5px;
+  }
+  .icon-right {
+    top: -30px;
+    left: -30px;
+  }
+  .icon-left {
+    top: -30px;
+    right: -30px;
+  }
+  .maincontent {
+    margin-top: 10rem;
   }
 }
 @media (max-width: 991.98px) {

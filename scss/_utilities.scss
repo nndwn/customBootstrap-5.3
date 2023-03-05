@@ -232,7 +232,7 @@ $utilities: map-merge(
     ),
     "font-size": (
       responsive: true,
-      rfs: true,
+      //rfs: true,
       property: font-size,
       class: fs,
       values: $spacers
@@ -304,7 +304,8 @@ $utilities: map-merge(
         dark: var(--dark),
         white: var(--white),
         yellow: var(--yellow),
-        grey: var(--grey)
+        grey: var(--grey),
+        grey-20: var(--grey-20)
         ),
     ),
     "background": (
@@ -313,7 +314,9 @@ $utilities: map-merge(
       class: bg, 
       values: (
         dark: var(--dark),
-        white: var(--white)
+        white: var(--white),
+        grey: var(--grey),
+        grey-20: var(--grey-20)
         ),
     ),
     "z-index": (

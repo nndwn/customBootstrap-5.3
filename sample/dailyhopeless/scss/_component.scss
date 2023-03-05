@@ -122,7 +122,60 @@ nav a.active {
     opacity: 1;
 }
 
-
-
+#gnbArea {
+    position: sticky;
+    position: -webkit-sticky;
+    overflow: auto;
+    box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
+    overflow-x: hidden;
+    z-index: 11;
+    .gnb {
+        white-space: nowrap;
+        .gnbItem{
+            opacity: .5;
+        }
+        .gnbItem.current{
+            opacity: 1;
+        }
+    }
+}
+.truncate{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    display: -webkit-inline-box;
+}
+.imagecontent{
+    height: 25rem;
+    img {
+        border-radius: 5px;
+        background-color: var(--dark);
+        box-shadow: 4px 4px 4px rgb(0 0 0 / 20%)
+    }
+    .text{
+        z-index: 10;
+        bottom: 10px;
+        right: 15px;
+        opacity: .5;
+    }    
+}
+.button{
+    border-radius: 5px;
+    svg {
+        margin-left: 1rem;
+    }
+}
+.icon-left, .icon-right {
+    z-index: 10;
+}
+.icon-left{
+    top: 0;
+    right: 0;
+}
+.icon-right {
+    top: 0;
+    left: 0;
+}
 
 

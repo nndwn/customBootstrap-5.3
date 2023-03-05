@@ -3,8 +3,14 @@
 
 @media (min-width: 576px) {  }
 
-
+$lg : 1200px;
 @include media-breakpoint-up(lg){
+    %minwidth {
+        min-width: $lg;
+    }
+    main {
+        @extend %minwidth;
+    }
     .fill-lg-dark {
         fill: var(--dark);
     }
@@ -25,13 +31,12 @@
         text-align: right;
         position: absolute;
         left: calc(50% - 360px);
-        //top: calc(50% - 80px);
         opacity: 0;
         width: 720px;
         height: 160px;
     }
     #mvArea{
-        min-width: 1200px;
+        @extend %minwidth;
         height: 100vh;
         &::before{
             @extend %mvarea;
@@ -56,11 +61,10 @@
             animation: startTxt 5s;
         }
         &.resize .mvList{
-            width: 1200px;
+            width: $lg;
             height: 360px;
         }
         .mvTxt {
-            //bottom: calc(50% - 250px);
             animation: startTxtArea 2.1s;
             h2 {
                 font-size: 8.5rem;
@@ -68,10 +72,8 @@
             }
         }
         .mvList {
-            //position: absolute;
-            //width: 100vw;
             height: 100vh;
-            min-width: 1200px;
+            @extend %minwidth;
             animation: startMv 2.1s;
             animation-timing-function: ease-in-out;
             transition: all .3s;
@@ -88,7 +90,7 @@
         
     }
     #mainTitleArea {
-        min-width: 1200px;
+        @extend %minwidth;
         top: calc(50vh + 16rem);
         transition: all .2s;
         transition-delay: 0s;
@@ -99,6 +101,24 @@
         p{
             white-space: pre-wrap;
         }
+    }
+    .content {
+        max-width: $lg;
+        margin: 0 auto;
+    }
+    .icon-left, .icon-right {
+        border-radius: 5px;
+    }
+    .icon-right {
+        top: -30px;
+        left: -30px;
+    }
+    .icon-left {
+        top: -30px;
+        right: -30px;
+    }
+    .maincontent {
+        margin-top: 10rem;
     }
 }
 
