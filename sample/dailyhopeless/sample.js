@@ -2,6 +2,7 @@
 //     $(".lang-menu").toggle()
 // })
 
+
 const elementClicked = document.querySelector("#lang");
 const elementYouWantToShow = document.querySelector(".lang-menu");
 
@@ -16,5 +17,24 @@ window.addEventListener('scroll', ()=>{
     } else {
         resize.classList.remove("resize");
     }
-    console.log(scroller);
 });
+
+window.scroll(function() {
+    let hT = document.getElementById("scroll-to").offset().top,
+        hH = document.getElementById("scroll-to").outerHeight(),
+        wH = window.height(),
+        wS = this.scrollTop();
+    if (wS > (hT+hH-wH) && (hT > wS) && (wS+wH > hT+hH)){
+       $('h1').classList.add("view")
+    } else {
+       $('h1').classList.remove("view")
+    }
+ });
+
+function footer(){
+    const str = document.getElementById("footer");
+    const year = new Date().getFullYear();
+        str.textContent = `${year}. Dailyhopeless. Batam, Indonesia.`
+}
+
+ footer()
