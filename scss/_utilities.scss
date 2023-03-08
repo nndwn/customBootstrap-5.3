@@ -300,24 +300,18 @@ $utilities: map-merge(
     "color": (
       responsive: true,
       property: color,
-      values: (
-        dark: var(--dark),
-        white: var(--white),
-        yellow: var(--yellow),
-        grey: var(--grey),
-        grey-20: var(--grey-20)
-        ),
+      values: $colour,
+    ),
+    "fill":(
+      responsive: true,
+      property: fill,
+      values: $colour,
     ),
     "background": (
       responsive: true,
       property: background,
       class: bg, 
-      values: (
-        dark: var(--dark),
-        white: var(--white),
-        grey: var(--grey),
-        grey-20: var(--grey-20)
-        ),
+      values: $colour,
     ),
     "z-index": (
       property: z-index,

@@ -66,13 +66,22 @@ $zindex-levels: (
   1: 1,
   2: 2,
   3: 3,
-  1000: 1000
+  1000: 1000,
+  1001: 1001
 ) !default;
 
 $position-values: (
   0: 0,
   50: 50%,
   100: 100%
+) !default;
+
+$colour: (
+  dark: var(--dark),
+  white: var(--white),
+  grey: var(--grey),
+  grey-20: var(--grey-20),
+  yellow: var(--yellow)
 ) !default;
 
 $gutters: $spacers !default;

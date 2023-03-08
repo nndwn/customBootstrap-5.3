@@ -1,17 +1,17 @@
 @use 'animation';
 
-nav a.active {
-    position: relative;
-    &::before {
-        content: '';
-        width: 100%;
-        position: absolute;
-        height: 4px;
-        bottom: -5px;
-        left: 0;
-        background-color: var(--yellow);
-    }
-}
+// nav a.active {
+//     position: relative;
+//     &::before {
+//         content: '';
+//         width: 100%;
+//         position: absolute;
+//         height: 4px;
+//         bottom: -5px;
+//         left: 0;
+//         background-color: var(--yellow);
+//     }
+// }
 
 .dropmenu {
     position: relative;
@@ -26,9 +26,6 @@ nav a.active {
     }
 }
 
-.lang-menu.show{
-    display: block;
-}
 .lang-menu {
     display: none;
     position: absolute;
@@ -121,7 +118,11 @@ nav a.active {
 #mvArea.resize+#mainTitleArea h3 {
     opacity: 1;
 }
-
+.navMobile {
+    .active {
+        opacity: 1 !important;
+    }
+}
 #gnbArea {
     position: sticky;
     position: -webkit-sticky;
@@ -129,15 +130,12 @@ nav a.active {
     box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
     overflow-x: hidden;
     z-index: 11;
-    .gnb {
-        white-space: nowrap;
         .gnbItem{
             opacity: .5;
         }
         .gnbItem.current{
             opacity: 1;
         }
-    }
 }
 .truncate{
     text-overflow: ellipsis;
@@ -196,4 +194,30 @@ nav a.active {
         z-index: -1;
     }
 }
+.footer {
+    box-shadow: 0 -1px 0 0 rgb(0 0 0 / 20%);
+}
+.currentLine {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 78px;
+    height: 4px;
+    background-color: var(--yellow);
+    padding: 0;
+    transition: all .2s ease-in-out;
+}
 
+#contactBox {
+    opacity: 1;
+    visibility: visible;
+    background: rgba(0,0,0,.2);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    backdrop-filter: saturate(180%) blur(10px);
+    height: 100%;
+    .modal {
+        max-width: 680px;
+        max-height:  calc(100% - 60px);
+        margin: 0 auto;
+    }
+}

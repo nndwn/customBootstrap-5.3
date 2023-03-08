@@ -8,25 +8,13 @@
 @import "utilities/api";
 //@import "component";
 
-//color and fill
-.fill-white {
-    fill: var(--white);  
-}
-
 .cursor-pointer {
     cursor: pointer;
 }
-
-
 //background-color
-.bg-yellow {
-    background-color: var(--yellow);
-}
 .bg-red {
     background-color: var(--red);
 }
-
-
 //font-family
 .font-custom{
     font-family: var(--font-custom);
@@ -37,7 +25,6 @@
 .serif {
     font-family: var(--font-serif);
 }
-
 .outline-none{
     outline: none;
 }
@@ -45,9 +32,11 @@
 .flex-basis-0{
     flex-basis: 0;
 }
-
 .list-style-none {
     list-style: none;
+}
+.overflow-hidden {
+    overflow: hidden;
 }
 
 // padding
