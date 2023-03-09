@@ -39,6 +39,7 @@ table {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 nav h1, nav h2, nav h3, nav h4, nav h5, nav h6 {
@@ -52,6 +53,7 @@ nav ul {
   --white: rgb(255, 255, 255);
   --dark: rgb(19, 19, 19);
   --grey: rgba(19, 19, 19, 80%);
+  --grey-50: rgba(19, 19, 19, 50%);
   --grey-20: rgba(19, 19, 19, 20%);
   --yellow: rgb(255, 212, 0);
   --red: rgb(255, 0, 50);
@@ -249,7 +251,6 @@ nav ul {
 .dropmenu::after {
   content: "";
   position: absolute;
-  top: 9px;
   right: 0;
   border-top: 3px solid var(--white);
   border-right: 3px solid transparent;
@@ -305,6 +306,9 @@ nav ul {
   object-position: -90px 30px !important;
 }
 
+.mvList li:last-child {
+  animation-delay: 5s;
+}
 .mvList .mvImg {
   min-height: 500px;
   transition: all 0.3s;
@@ -315,7 +319,7 @@ nav ul {
   display: inline-block;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--grey-50);
   transform: translateY(-50%);
   top: 50%;
   transition: all 0.3s;
@@ -347,7 +351,7 @@ nav ul {
   position: sticky;
   position: -webkit-sticky;
   overflow: auto;
-  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 0 0 var(--grey-20);
   overflow-x: hidden;
   z-index: 11;
 }
@@ -372,7 +376,7 @@ nav ul {
 .imagecontent img {
   border-radius: 5px;
   background-color: var(--dark);
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 4px var(--grey-20);
 }
 .imagecontent .text {
   z-index: 10;
@@ -411,7 +415,7 @@ nav ul {
   display: inline-block;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--grey-50);
   top: 0;
   right: 0;
   left: 0;
@@ -419,7 +423,7 @@ nav ul {
 }
 
 .footer {
-  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -1px 0 0 var(--grey-20);
 }
 
 .currentLine {
@@ -445,6 +449,35 @@ nav ul {
   max-width: 680px;
   max-height: calc(100% - 60px);
   margin: 0 auto;
+}
+
+.popleft {
+  left: 174px;
+  top: 0px;
+  border: 1px solid var(--grey-20);
+  border-radius: 3px;
+  box-shadow: 1px 1px 5px var(--grey-20);
+  transition: all 0.2s ease;
+}
+.popleft::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -12px;
+  border-top: 6px solid transparent;
+  border-right: 6px solid var(--grey-20);
+  border-left: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+.popleft::after {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: -10px;
+  border-top: 5px solid transparent;
+  border-right: 5px solid var(--white);
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid transparent;
 }
 
 .container,
@@ -7184,6 +7217,10 @@ nav ul {
   overflow: hidden;
 }
 
+.user-select-none {
+  user-select: none;
+}
+
 @media (min-width: 992px) {
   #mainTitleArea, #mvArea .mvList, #mvArea, main {
     min-width: 1200px;
@@ -7199,7 +7236,7 @@ nav ul {
   }
   .nav {
     opacity: 0.95;
-    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 0 0 var(--grey-20);
     animation: startHeader 2.5s;
   }
   .nav .navigationPC {
@@ -7262,6 +7299,10 @@ nav ul {
   #mvArea .mvList li {
     height: 100vh;
     top: 0;
+  }
+  #mvArea .mvList li:last-child .mvImg img {
+    -o-object-position: center center !important;
+    object-position: center center !important;
   }
   #mvArea .mvList .mvImg {
     min-height: 100vh;

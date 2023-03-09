@@ -14,6 +14,26 @@ elementClicked.addEventListener("click", ()=>{
       }
 });
 
+const pop = document.querySelectorAll(".pop");
+for (let i = 0; pop.length > i; i++){
+  pop[i].addEventListener("click", ()=>{
+    const nopage = document.querySelectorAll("#Nopages")[0]
+    const nopage1 = document.querySelectorAll("#Nopages")[1]
+      if (nopage.style.opacity==="0"){
+        nopage.style.opacity==="0"
+      } else {
+        nopage.style.opacity = "0";
+      }
+      if (nopage1.style.opacity==="0"){
+        nopage1c
+      } else {
+        nopage1.style.opacity = "0";
+      }
+
+  })
+}
+
+
 // window.scroll(function() {
 //     let hT = document.getElementById("scroll-to").offset().top,
 //         hH = document.getElementById("scroll-to").outerHeight(),
@@ -94,3 +114,4 @@ window.addEventListener('scroll', ()=>{
     }
     navigationPC()
 });
+

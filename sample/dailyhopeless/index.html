@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Structur</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/test.css" />
 </head>
 
-<body class="overflow-hidden">
+<body class="">
     <div class="outline-none">
         <div class="nav container-fluid position-lg-fixed p-0 bg-lg-white z-1000 position-absolute top">
             <header class="mx-lg-9 mx-3 position-relative">
@@ -38,7 +37,7 @@
 
                     <!-- lang -->
                     <div class="d-flex justify-content-end flex-grow-1 flex-basis-0" id="lang">
-                        <div class="d-flex align-items-center cursor-pointer">
+                        <div class="d-flex align-items-center cursor-pointer dropmenu items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="25" height="25"
                                 class="fill-lg-dark fill-white">
                                 <path
@@ -47,7 +46,7 @@
                                     d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z" />
                             </svg>
                             <span
-                                class="uppercase font-custom self-center fs-4 pl-2 dropmenu pl-2 pr-3 color-white color-lg-dark">
+                                class="uppercase font-custom self-center fs-4 pl-2  pl-2 pr-3 color-white color-lg-dark">
                                 en
                             </span>
                         </div>
@@ -112,14 +111,18 @@
                                     <h1 class="font-custom fs-9 my-3">Themes</h1>
                                     <p class="truncate color-grey">We have made many website themes you can choose and previews. We accept custom themes according to UI design you provide. If you have a problem with  we provide themes, we are ready to help you.</p>
                                 </div>
-                
-                                    <a href="#" class="bg-yellow p-3 button self-start">
+                                <div class="position-relative d-flex">
+                                    <a class="bg-yellow p-3 button self-start items-center d-flex pop user-select-none" >
                                         <span>More Details</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                                             <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
                                             <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
                                         </svg>
                                     </a>
+                                    <div id="Nopages" class="position-absolute popleft px-2 py-3 bg-white" style="display: none;">
+                                        <span>Sorry, No Page</span>
+                                    </div>
+                                </div>
                     
                             </div>
                             <div class="image-right col-lg-7 col-12 position-relative imagecontent order-1 order-lg-2">
@@ -148,15 +151,19 @@
                                 <h1 class="font-custom fs-9 my-3">Themes</h1>
                                 <p class="truncate color-grey">We have made many website themes you can choose and previews. We accept custom themes according to UI design you provide. If you have a problem with  we provide themes, we are ready to help you.</p>
                             </div>
-               
-                                <a href="#" class="bg-yellow p-3 button self-start">
+                            <div class="position-relative d-flex">
+                                <a  class="bg-yellow p-3 button self-start items-center d-flex pop user-select-none">
                                     <span>More Details</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
                                         <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
                                     </svg>
                                 </a>
-                   
+                                <div id="Nopages" class="position-absolute popleft px-2 py-3 bg-white opacity-0">
+                                    <span>Sorry, No Page</span>
+                                </div>
+                            </div>
+                                
                         </div>
                         <div class="image-right col-lg-7 col-12 position-relative imagecontent order-1 ">
                             <div class="position-absolute icon-left bg-yellow p-3">
@@ -183,12 +190,11 @@
                             <p class="color-white fs-5 col-lg-4 text-center text-lg-start py-9 px-4">
                                 We always there for you,  yeah you are reading this please push button
                             </p>
-                            <a href="mailto:dailyhopeless.dev@gmail.com" class="bg-yellow p-3 button self-center">
+                            <a href="mailto:dailyhopeless.dev@gmail.com" class="bg-yellow p-3 button self-center d-flex">
                                 <span>Contact us</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                                    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                                    <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                                  </svg>
                             </a>
                     </div>
                     <div class="image">
@@ -256,11 +262,11 @@
             </div>
             </footer>
         </div>
-        <div id="contactBox" class="position-fixed d-flex items-center left-0 right-0 bottom-0 z-1001 col-12">
+        <!-- <div id="contactBox" class="position-fixed d-flex items-center left-0 right-0 bottom-0 z-1001 col-12">
             <div class="modal">
                 <div class="bg-white "></div>
             </div>
-        </div>
+        </div> -->
     <script src="sample.js"></script>
 </body>
 

@@ -44,9 +44,6 @@ a {
 nav h1, nav h2, nav h3, nav h4, nav h5, nav h6 {
   display: inline;
 }
-nav a {
-  text-decoration: none;
-}
 nav ul {
   list-style: none;
 }
@@ -54,7 +51,8 @@ nav ul {
 :root {
   --white: rgb(255, 255, 255);
   --dark: rgb(19, 19, 19);
-  --grey: rgba(19, 19, 19, 20%);
+  --grey: rgba(19, 19, 19, 80%);
+  --grey-20: rgba(19, 19, 19, 20%);
   --yellow: rgb(255, 212, 0);
   --red: rgb(255, 0, 50);
   --blue:rgb(255, 0, 50);
